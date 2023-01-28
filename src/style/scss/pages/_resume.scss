@@ -1,0 +1,148 @@
+@use "../abstracts/" as *;
+
+.resume {
+  position: relative;
+  background-color: var(--hero-bg-color);
+  section {
+    padding: 0;
+    padding-top: 100px;
+  }
+  .skill-cart-item {
+    background-color: var(--item-bg-color);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.5s ease;
+    &:hover {
+      transform: translatey(-10px);
+    }
+    h4 {
+      font-size: toRem(18);
+    }
+
+    .circle-progress {
+      position: relative;
+      margin-bottom: 7px;
+
+      .circlebg {
+        fill: none;
+        stroke: var(--border-color);
+      }
+      svg {
+        fill: none;
+        stroke: var(--primary-color);
+        transform: rotate(-90deg);
+      }
+      span.percent {
+        position: absolute;
+        top: 37%;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: toRem(18);
+      }
+    }
+  }
+
+  // resume-section-style
+  .my-resume {
+    .resume-section {
+      h4 {
+        font-size: toRem(22);
+        display: flex;
+        margin-bottom: 20px;
+
+        align-items: center;
+        svg {
+          color: var(--primary-color);
+          margin-right: 5px;
+        }
+      }
+      .resume-item {
+        position: relative;
+        display: flex;
+        .year {
+          position: relative;
+          left: 0;
+          top: 30px;
+          min-width: 110px;
+          margin-right: 40px;
+          text-align: center;
+          line-height: 25px;
+          background-color: var(--item-bg-color);
+          height: 25px;
+          border-radius: 20px;
+          font-size: 13px;
+          @include max-sm {
+            top: 21px;
+            position: absolute;
+            left: 40px;
+          }
+        }
+        .resume-right {
+          position: relative;
+          border-left: 4px solid var(--border-color);
+          padding-left: 40px;
+          padding-top: 30px;
+          @include max-sm {
+            padding-top: 60px;
+          }
+          p {
+            font-size: 15px;
+          }
+          .borders {
+            position: absolute;
+            .line-border {
+              position: absolute;
+              height: 4px;
+              width: 70px;
+              background-color: var(--border-color);
+              top: 11px;
+              left: -76px;
+              display: inline-block;
+
+              // @include max-sm {
+              //   top: -21px;
+
+              // }
+              @include max-sm {
+                left: -38px;
+                width: 25px;
+                top: -28px;
+              }
+            }
+          }
+          .rounded-border {
+            width: 1.5rem;
+            height: 1.5rem;
+            border: 4px solid var(--border-color);
+            border-radius: 50%;
+            position: absolute;
+            top: 2px;
+            left: -54px;
+            background-color: var(--background-color);
+
+            @include max-sm {
+              top: -37px;
+            }
+          }
+        }
+        h5 {
+          color: var(--primary-color);
+        }
+        .college-name {
+          margin-bottom: 10px;
+          color: var(--heading-color);
+        }
+      }
+    }
+    .resume-working {
+      @include max-lg {
+        margin-top: 60px;
+      }
+    }
+  }
+}

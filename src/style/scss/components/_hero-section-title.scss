@@ -1,0 +1,42 @@
+@use "../abstracts/" as *;
+
+.hero-section-title {
+  position: relative;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--hero-bg-color);
+  text-align: center;
+  padding: 20px;
+  h1 {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    @include max-md {
+      font-size: toRem(23);
+    }
+  }
+
+  .links {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+
+    p::before {
+      content: "/";
+      margin-right: 10px;
+    }
+  }
+  .hero-section-bg {
+    background: url(https://tf-react-bieber.vercel.app/images/herosection-bg.png);
+    background-repeat: repeat;
+    background-position: 13px;
+    background-size: initial;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+}

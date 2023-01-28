@@ -1,0 +1,139 @@
+@use "../abstracts/" as *;
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--background-color);
+  display: flex;
+  width: 8vw;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-around;
+  border-right: 1px solid var(--border-color);
+  @include max-lg {
+    display: none;
+  }
+  .logo-img {
+    display: flex;
+    justify-content: center;
+
+    a {
+      display: block;
+      height: 50px;
+      width: 50px;
+      @include xxl {
+        width: 70px;
+        height: 70px;
+      }
+      img {
+        border-radius: 50%;
+        border: 3px solid var(--primary-color);
+      }
+    }
+  }
+  .menubar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    span {
+      cursor: pointer;
+      transition: 0.2s;
+      &:hover {
+        color: rgb(229, 229, 229);
+      }
+    }
+  }
+  .copy-right {
+    padding: 10px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      display: flex;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      a {
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+.menu-btn {
+  background-color: #203b40;
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translatey(-50%);
+  z-index: 10;
+  overflow: hidden;
+  display: none;
+  transition: all 0.5s;
+  button {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    height: 34px;
+    width: 34px;
+    line-height: 42px;
+    cursor: pointer;
+  }
+  @include max-lg {
+    display: block;
+    &.show {
+      left: 300px;
+    }
+  }
+}
+
+.fullscreenMenu {
+  position: fixed;
+  inset: 0;
+  background-color: var(--background-color);
+  margin-left: 8vw;
+  height: 100vh;
+  z-index: 99;
+
+  @include max-lg {
+    margin-left: 0;
+    width: 300px;
+  }
+  nav {
+    ul {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      li {
+        flex-basis: 16.66%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        transition: all 0.5s ease;
+        &:not(:last-child) {
+          border-bottom: 1px solid var(--border-color);
+        }
+        &:hover {
+          flex-basis: 35%;
+          a {
+            font-size: 25px;
+            color: var(--hover-text-color);
+          }
+        }
+        a {
+          display: block;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--heading-color);
+          font-size: 20px;
+          text-transform: uppercase;
+          width: 100%;
+          font-weight: 500;
+          transition: all 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+}

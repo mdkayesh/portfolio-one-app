@@ -1,0 +1,84 @@
+@use "../abstracts/" as *;
+
+.works {
+  background-color: var(--hero-bg-color);
+  .portfolio-section {
+    .portfolio-filter {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      @include max-sm {
+        gap: 10px;
+      }
+    }
+
+    .portfolio-item-container {
+      margin-top: 30px;
+      .portfolio-item {
+        padding: 15px;
+        background-color: var(--item-bg-color);
+        transition: all 0.4s;
+        &:hover {
+          transform: translatey(-10px);
+          .img {
+            img {
+              filter: blur(3px);
+            }
+            .overlay {
+              left: 0;
+            }
+          }
+        }
+        .img {
+          position: relative;
+          margin-bottom: 15px;
+          overflow: hidden;
+          button {
+            background: var(--btn-bg-color);
+            color: var(--btn-text-color);
+            font-size: 24px;
+            height: 40px;
+            border-radius: 50%;
+            width: 40px;
+            line-height: 48px;
+            margin-right: 10px;
+            cursor: pointer;
+          }
+        }
+        span {
+          padding: 66% 0 0;
+          display: block;
+        }
+        img {
+          position: absolute;
+          inset: 0;
+          height: 100%;
+          width: 100%;
+        }
+        .overlay {
+          position: absolute;
+          left: -100%;
+          top: 0;
+          bottom: 0;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: rgba(86, 86, 86, 0.655);
+          transition: 0.3s ease-in-out;
+        }
+      }
+    }
+    .load-more-btn {
+      display: flex;
+      justify-content: center;
+      margin-top: 25px;
+      .btn-small {
+        background-color: var(--btn-bg-color);
+        color: var(--btn-text-color);
+      }
+    }
+  }
+}

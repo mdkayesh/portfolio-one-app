@@ -1,0 +1,67 @@
+@use "../abstracts/" as *;
+
+.section-title {
+  margin-bottom: 55px;
+  h2 {
+    font-size: toRem(42);
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 5;
+    @include max-md {
+      font-size: toRem(38);
+    }
+    @include max-sm {
+      font-size: toRem(33);
+    }
+
+    span {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      font-size: toRem(130);
+      transform: translate(-50%);
+      color: rgba(255, 255, 255, 0.083);
+      white-space: nowrap;
+      user-select: none;
+
+      @include max-md {
+        font-size: toRem(100);
+        top: -12px;
+      }
+      @include max-sm {
+        font-size: toRem(72);
+        top: -10px;
+      }
+    }
+  }
+  .underline {
+    position: relative;
+    height: 7px;
+    background-color: #72e2ae3e;
+    width: 120px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 20px auto 0;
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      background-color: var(--primary-color);
+      width: 6px;
+      border-radius: 5px;
+      height: 100%;
+      animation: lineAnim 3s ease-in-out infinite;
+    }
+
+    @keyframes lineAnim {
+      0% {
+        left: -1%;
+      }
+      100% {
+        left: 101%;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@use "../abstracts/" as *;
+
+.my-skills {
+  .progress-bars {
+    margin-top: 30px;
+    .progress-item {
+      margin-bottom: 20px;
+      h5 {
+        font-weight: 500;
+        margin: 10px 0;
+        span {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+}

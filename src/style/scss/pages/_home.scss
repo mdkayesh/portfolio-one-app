@@ -1,0 +1,97 @@
+@use "../abstracts/" as *;
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--hero-bg-color);
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+
+  .hero-section {
+    .hero-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+      .img-wrapper {
+        position: relative;
+        min-height: 140px;
+        min-width: 140px;
+        @include max-sm {
+          min-width: 120px;
+          min-height: 120px;
+        }
+        .img-rounded-border {
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 100%;
+          background: black;
+          inset: 0;
+          border-radius: 50%;
+          background: rgb(14, 28, 47);
+          background: var(--border-gradient);
+          animation: spin 1.5s linear infinite;
+        }
+
+        @keyframes spin {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+        img {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          padding: 5px;
+        }
+      }
+    }
+
+    .hero-heading {
+      padding: 0 60px;
+      @include max-lg {
+        padding: 0 0px;
+      }
+
+      h1 {
+        font-size: toRem(45);
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @include max-lg {
+          font-size: toRem(42);
+        }
+        @include max-md {
+          font-size: toRem(35);
+        }
+        @include max-sm {
+          font-size: toRem(30);
+        }
+        .Typewriter {
+          margin-left: 12px;
+          white-space: wrap;
+          span {
+            color: var(--primary-color);
+          }
+        }
+      }
+      p {
+        line-height: 1.5;
+        font-size: toRem(18);
+        @include max-md {
+          font-size: toRem(16);
+        }
+      }
+    }
+  }
+}

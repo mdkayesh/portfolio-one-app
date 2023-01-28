@@ -1,0 +1,19 @@
+// use the abostracts css
+
+@use "../style/scss/abstracts";
+
+// use the base css
+
+@use "../style/scss/base";
+
+// use the components css
+
+@use "../style/scss/components";
+
+// use the layout css
+
+@use "../style/scss/layout";
+
+// use the pages css
+
+@use "../style/scss/pages";

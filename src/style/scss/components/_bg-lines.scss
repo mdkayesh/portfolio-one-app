@@ -1,0 +1,17 @@
+.bg-lines {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: space-around;
+  z-index: -1;
+
+  span {
+    height: 100%;
+    background-color: var(--border-color);
+    width: 2px;
+    display: block;
+  }
+}

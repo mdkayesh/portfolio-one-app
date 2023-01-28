@@ -1,0 +1,87 @@
+@use "../abstracts/" as *;
+
+.contact {
+  position: relative;
+  padding: 100px 0;
+  background-color: var(--hero-bg-color);
+  h4 {
+    font-size: 23px;
+    margin-bottom: 12px;
+  }
+  .contact-info {
+    .line {
+      width: 80px;
+      height: 4px;
+      background-color: #203440;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      margin-top: 15px;
+    }
+    .contact-item {
+      background-color: var(--item-bg-color);
+      padding: 20px;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      .cart {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        h5 {
+          margin-bottom: 0.6rem;
+        }
+        a {
+          display: block;
+          color: var(--text-color);
+        }
+        .icon {
+          font-size: 24px;
+          background-color: #203440;
+          height: 60px;
+          width: 60px;
+          min-width: 60px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+
+  .contact-form {
+    background-color: var(--item-bg-color);
+    padding: 20px;
+    border-radius: 5px;
+    form {
+      label,
+      input,
+      textarea {
+        width: 100%;
+      }
+      input,
+      textarea {
+        padding: 12px 15px;
+        background-color: var(--item-bg-color);
+        color: var(--heading-color);
+        border-radius: 5px;
+        font-size: 17px;
+        transition: 0.5s ease;
+        border: 1px solid var(--border-color);
+        &::placeholder {
+          font-weight: 600;
+          color: var(--border-color);
+        }
+        &:focus {
+          border: 1px solid var(--primary-color);
+        }
+      }
+      label {
+        margin: 10px 0;
+        display: block;
+        font-weight: 600;
+      }
+    }
+  }
+}
