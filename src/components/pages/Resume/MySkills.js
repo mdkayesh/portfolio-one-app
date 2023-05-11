@@ -26,14 +26,14 @@ const MySkills = () => {
                 <div className="circle-progress">
                   <svg width="120" height="120">
                     <circle
-                      class="circlebg"
+                      className="circlebg"
                       cx="60"
                       cy="60"
                       r="54"
                       pathLength="1"
                       strokeLinecap="round"
                       strokeWidth="12"
-                      dataProjection-id="14"
+                      dataprojection-id="14"
                     ></circle>
                     <motion.circle
                       initial={{ strokeDasharray: "0.1px 1px" }}
@@ -47,8 +47,8 @@ const MySkills = () => {
                       opacity="1"
                       pathLength="1"
                       strokeDashoffset="0px"
-                      //   stroke-dasharray="0.85px"
-                      dataProjection-id="15"
+                      //   strokeDasharray="0.85px"
+                      dataprojection-id="15"
                     ></motion.circle>
                   </svg>
                   <span className="percent">85%</span>
@@ -64,14 +64,14 @@ const MySkills = () => {
                 <div className="circle-progress">
                   <svg width="120" height="120">
                     <circle
-                      class="circlebg"
+                      className="circlebg"
                       cx="60"
                       cy="60"
                       r="54"
                       pathLength="1"
-                      stroke-linecap="round"
-                      stroke-width="12"
-                      data-projection-id="14"
+                      strokeLinecap="round"
+                      strokeWidth="12"
+                      dataprojection-id="14"
                     ></circle>
                     <motion.circle
                       initial={{ strokeDasharray: "0.1px 1px" }}
@@ -80,13 +80,13 @@ const MySkills = () => {
                       cx="60"
                       cy="60"
                       r="54"
-                      stroke-linecap="round"
-                      stroke-width="12"
+                      strokeLinecap="round"
+                      strokeWidth="12"
                       opacity="1"
                       pathLength="1"
-                      stroke-dashoffset="0px"
-                      stroke-dasharray="0.70px"
-                      data-projection-id="15"
+                      strokeDashoffset="0px"
+                      strokeDasharray="0.70px"
+                      dataprojection-id="15"
                     ></motion.circle>
                   </svg>
                   <span className="percent">70%</span>
@@ -102,14 +102,14 @@ const MySkills = () => {
                 <div className="circle-progress">
                   <svg width="120" height="120">
                     <circle
-                      class="circlebg"
+                      className="circlebg"
                       cx="60"
                       cy="60"
                       r="54"
                       pathLength="1"
-                      stroke-linecap="round"
-                      stroke-width="12"
-                      data-projection-id="14"
+                      strokeLinecap="round"
+                      strokeWidth="12"
+                      dataprojection-id="14"
                     ></circle>
                     <motion.circle
                       initial={{ strokeDasharray: "0.1px 1px" }}
@@ -118,13 +118,13 @@ const MySkills = () => {
                       cx="60"
                       cy="60"
                       r="54"
-                      stroke-linecap="round"
-                      stroke-width="12"
+                      strokeLinecap="round"
+                      strokeWidth="12"
                       opacity="1"
                       pathLength="1"
-                      stroke-dashoffset="0px"
-                      stroke-dasharray="0.90px"
-                      data-projection-id="15"
+                      strokeDashoffset="0px"
+                      strokeDasharray="0.90px"
+                      dataprojection-id="15"
                     ></motion.circle>
                   </svg>
                   <span className="percent">90%</span>
@@ -140,14 +140,14 @@ const MySkills = () => {
                 <div className="circle-progress">
                   <svg width="120" height="120">
                     <circle
-                      class="circlebg"
+                      className="circlebg"
                       cx="60"
                       cy="60"
                       r="54"
                       pathLength="1"
-                      stroke-linecap="round"
-                      stroke-width="12"
-                      data-projection-id="14"
+                      strokeLinecap="round"
+                      strokeWidth="12"
+                      dataprojection-id="14"
                     ></circle>
                     <motion.circle
                       initial={{ strokeDasharray: "0.1px 1px" }}
@@ -156,13 +156,13 @@ const MySkills = () => {
                       cx="60"
                       cy="60"
                       r="54"
-                      stroke-linecap="round"
-                      stroke-width="12"
+                      strokeLinecap="round"
+                      strokeWidth="12"
                       opacity="1"
                       pathLength="1"
-                      stroke-dashoffset="0px"
-                      stroke-dasharray="0.50px"
-                      data-projection-id="15"
+                      strokeDashoffset="0px"
+                      strokeDasharray="0.50px"
+                      dataprojection-id="15"
                     ></motion.circle>
                   </svg>
                   <span className="percent">50%</span>

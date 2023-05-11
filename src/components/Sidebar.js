@@ -31,8 +31,6 @@ const links = [
   },
 ];
 
-console.log(window.innerWidth);
-
 const Sidebar = () => {
   const [open, setopen] = useState(false);
   const [width, setwidth] = useState(window.innerWidth);
@@ -63,7 +61,7 @@ const Sidebar = () => {
     <>
       <div className="sidebar">
         <div className="logo-img">
-          <Link>
+          <Link to={"/"}>
             <img
               src="https://tf-react-bieber.vercel.app/images/formal-image.png"
               alt="logo-img"
@@ -77,7 +75,10 @@ const Sidebar = () => {
         </div>
         <div className="copy-right">
           <p>
-            © 2023 <Link>NuclearThemes</Link>
+            © 2023 cloned by{" "}
+            <a href="https://www.linkedin.com/in/md-kayesh-37b0a1276/">
+              Md Kayesh
+            </a>
           </p>
         </div>
       </div>

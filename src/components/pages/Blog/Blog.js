@@ -76,16 +76,16 @@ const Blog = () => {
                             <img src={blog.imgUrl} alt="blog" />
                           </div>
                           <h4>
-                            <Link title={blog.name}>
+                            <p title={blog.name}>
                               {blog.name.length > 25
                                 ? blog.name.slice(0, 25) + "..."
                                 : blog.name}
-                            </Link>
+                            </p>
                           </h4>
                           <div className="time-category">
                             <div className="category">
                               {blog.category.map((item, index) => (
-                                <Link key={index}>{item}</Link>
+                                <p key={index}>{item}</p>
                               ))}
                             </div>
                             <p>{dateData[blog.id].time}</p>

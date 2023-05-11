@@ -7,7 +7,7 @@ const SingleBlog = () => {
   const { singleBlog, dateData } = UseBlogContext();
 
   return singleBlog.map((blog) => (
-    <div className="single-blog">
+    <div className="single-blog" key={blog.id}>
       <HeroSectionTitle heading={blog.name} />
       <section className="single-blog-section">
         <BgLines />
@@ -19,7 +19,9 @@ const SingleBlog = () => {
             <div className="col-12 col-lg-6">
               <strong>Category:</strong>
               {blog.category.map((category) => (
-                <span className="category">{category}</span>
+                <span className="category" key={category}>
+                  {category}
+                </span>
               ))}
             </div>
             <div className="publish col-12 col-lg-6">
